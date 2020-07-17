@@ -1,32 +1,28 @@
 server:
-  port: 8080
-
+  port: 80
+# DataSource Config
 spring:
   datasource:
-    url: jdbc:h2:~/test
     driver-class-name: org.h2.Driver
+    schema: classpath:db/schema.sql
+    data: classpath:db/data.sql
+    url: jdbc:h2:~/bms
     username: hegx
     password: 123456
-    #，每次启动程序，程序都会运行schema.sql文件，对数据库的数据操作
-    schema: classpath:db/schema.sql
-    #，每次启动程序，程序都会运行data.sql文件，对数据库的数据操作
-    data: classpath:db/data.sql
-    jpa:
-      database: h2
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      h2:
-        console:
-          path: /h2-console
-          enabled: true
+  h2:
+    console:
+      enabled: true
+  cache:
+    ehcache:
+      config: classpath:ehcache/ehcache.xml
+#mybatis:
 mybatis:
-  mapper-locations: classpath:mapper/*Mapper.xml
-  type-aliases-package: com.szhn.hegx.bms
-
-#showSql
+  config-locations: classpath:mybatis/mybatis-config.xml
+  mapper-locations: classpath:mybatis/mapper/*.xml
+  type-aliases-package: com.szhn.hegx.bms.model
+#logback
 logging:
-  level:
-    com:
-      example:
-        mapper : debug
+  config: classpath:logback/logback-spring.xml
+#swagger
+mconfig:
+  swagger-ui-open: true
