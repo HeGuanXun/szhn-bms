@@ -1,0 +1,25 @@
+@import "example.scss";
+
+.fullsize {
+  width: 100%;
+  height: 100%;
+}
+
+.el-header {
+  padding: 0 !important;
+}
+
+.el-main {
+  padding: 0 !important;
+}
+
+.columnflex {
+  display: flex;
+  flex-direction: column;
+}
+
+.centerflex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

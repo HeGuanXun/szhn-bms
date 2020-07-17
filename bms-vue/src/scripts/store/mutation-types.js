@@ -1,0 +1,12 @@
+export const RESTORE_STATE = "RESTORE_STATE";
+export const UPDATE_LOADING = "UPDATE_LOADING";
+export const AGE = "AGE";
+export const TOKEN = "TOKEN";
+export const USERNAME = "USERNAME";
+export const INVITE = "INVITE";
+export const LOGOUT = "LOGOUT";
+export const NAV = "NAV";
+export const TITLE = "TITLE";
+export const LANGUAGE = "LANGUAGE";
+export const AREA = "AREA";
+export const VUE = "VUE";
