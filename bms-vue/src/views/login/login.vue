@@ -9,7 +9,7 @@
     style="width: 400px"
   >
     <div style="display:flex;  justify-content: flex-end;">
-      <h2 class="title">数字海南图书馆管理系统测试平台</h2>
+      <h2 class="title">拓尔思Vue2.0测试平台</h2>
     </div>
     <el-form-item prop="account">
       <el-input
